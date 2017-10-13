@@ -1,4 +1,4 @@
 <?
-print date('d.m.Y');
+print date('d.m.Y'); 
 ?>
 hello
