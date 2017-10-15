@@ -5,6 +5,7 @@ print $data=file_get_contents("http://openapi.clearspending.ru/restapi/v3/contra
 $data=json_decode($data,true);
 $total=$data[contracts][total];
 $cn=$data[contracts][data];
+print_r($cn);
 foreach($cn as $contract)
 print_r($contract[productsCountries]); 
 print_r($data);
