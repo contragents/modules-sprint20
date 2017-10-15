@@ -4,6 +4,7 @@ print_r($_GET);
 print $data=file_get_contents("http://openapi.clearspending.ru/restapi/v3/contracts/select/?okdp_okpd={$_GET[okpd]}");
 $data=json_decode($data,true);
 $total=$data[contracts][total];
+print $total;
 $cn=$data[contracts][data];
 print($cn);
 foreach($cn as $contract)
