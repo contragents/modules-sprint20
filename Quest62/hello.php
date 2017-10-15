@@ -1,6 +1,10 @@
 <?
-$data=file_get_contets("http://openapi.clearspending.ru/restapi/v3/contracts/select/?okpd=0112000");
+$data=file_get_contets("http://openapi.clearspending.ru/restapi/v3/contracts/select/?okdp_okpd=$GET[okpd]");
 $data=json_decode($data,true);
+$total=$data[contracts][total];
+foreach($data[contracts][data] as $contract)
+printr($contract[productsCountries]);
+print_r($data);
 print_r($dtat);
 exit();
 print date('d.m.Y'); 
